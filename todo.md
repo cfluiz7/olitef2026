@@ -1,0 +1,97 @@
+# Project TODO
+
+- [x] Definir experiência visual elegante, clara e responsiva para alunos e professores
+- [x] Separar acessos e navegação entre perfil de aluno e perfil de professor
+- [x] Implementar autenticação e proteção de rotas por perfil
+- [x] Criar trilhas de estudo para 6.º–7.º e 8.º–9.º conforme os níveis da escola; Ensino Médio fica fora do escopo atual
+- [x] Organizar conteúdos por temas de educação financeira
+- [x] Implementar quizzes interativos com correção imediata persistidos no backend
+- [x] Registar tentativas, XP por resposta e feedback explicativo; sequência diária agora é calculada por datas persistidas
+- [x] Criar painel do aluno com progresso, desempenho por tema e conquistas ligados a dados reais
+- [x] Criar área do professor para turmas e acompanhamento de alunos ligados a dados reais
+- [x] Permitir ao professor disponibilizar conteúdos autorizados por upload seguro
+- [x] Criar biblioteca inicial com referências para provas, simulados e caderno de estudante públicos da OLITEF
+- [x] Respeitar os termos de utilização e indicar a origem dos materiais públicos
+- [x] Implementar importação segura de documentos privados por professor autenticado, sem recolher credenciais da OLITEF
+- [x] Garantir que a aplicação não recolhe nem armazena palavras-passe da OLITEF
+- [x] Criar modelo de dados e migrações para perfis, turmas, conteúdos, questões, tentativas, progresso, conquistas e ficheiros
+- [x] Adicionar testes Vitest para permissões, quizzes, progresso e importação segura (cobertura de logout, catálogo, autorização, tentativas e validação de PDF)
+- [x] Validar a interface em desktop e mobile (revisão visual inicial concluída)
+- [x] Executar verificação de tipos, testes e revisão visual antes da entrega
+- [x] Processar o ficheiro `olitef.zip` enviado pelo professor
+- [x] Identificar e catalogar os materiais por Nível 1 (6.º–7.º) e Nível 2 (8.º–9.º)
+- [x] Transformar conceitos em microaulas, dicas, exemplos e desafios iniciais adequados ao 6.º–7.º ano
+- [x] Integrar os conteúdos enviados apenas como materiais autorizados do professor, sem guardar credenciais externas; PDFs são enviados para storage externo e referenciados na base
+- [x] Confirmar o escopo atual da escola: apenas Nível 1 (6.º–7.º) e Nível 2 (8.º–9.º); Ensino Médio fica fora desta versão
+- [x] Ligar o registo de tentativas, progresso, conquistas e turmas ao backend/tRPC; cálculo completo de XP e sequência permanece em evolução
+- [x] Adicionar cálculo e visualização real de desempenho por tema
+- [x] Conectar a área do professor às procedures de turmas, materiais e acompanhamento
+- [x] Criar tabelas e queries específicas para progresso e conquistas
+- [x] Adicionar testes Vitest para permissões, quizzes, progresso e importação segura
+- [x] Implementar upload real de materiais autorizados com armazenamento externo e controlo de acesso de professor; associação detalhada por turma fica pendente
+- [x] Aplicar controlo de acesso por perfil usando `profileType` e procedures dedicadas
+- [x] Persistir e atualizar `studentProgress` e `studentAchievements` a partir das tentativas de quiz
+- [x] Adicionar testes Vitest para autorização por perfil e acesso às procedures de turmas
+- [x] Adicionar testes Vitest para `student.recordAttempt`, leitura de progresso/conquistas e validações de materiais do professor
+- [x] Adicionar testes do fluxo de validação e restrição por perfil de PDFs autorizados
+- [x] Adicionar teste Vitest que rejeite `teacher.addMaterial` para utilizador aluno
+- [x] Implementar e testar upload seguro de PDF autorizado no backend e storage, com validação de MIME, tamanho e perfil
+- [x] Adicionar teste de integração para leitura e escrita de progresso após uma tentativa de quiz; conquistas permanecem sem cálculo automático
+- [x] Alinhar a UI da área do professor e restantes guards de navegação com `profileType`, não apenas `role`
+- [x] Adicionar testes Vitest para `teacher.uploadPdf`, cobrindo perfil não-professor, MIME/tamanho inválidos e upload PDF válido
+- [x] Adicionar teste de integração frontend/backend para o seletor de PDF chamar `uploadPdf` com ficheiros permitidos
+- [x] Rever e alinhar o guard da área do professor com `profileType`
+- [x] Adicionar teste Vitest específico para `teacher.uploadPdf` com MIME inválido
+- [x] Validar a procedure e a ligação do seletor de PDF permitido a `uploadPdf`
+- [x] Criar apresentação didática para o 6.º ano com os conceitos essenciais da prova OLITEF
+- [x] Adaptar explicações, exemplos e desafios ao nível de compreensão do 6.º ano
+- [x] Gerar e rever a apresentação final em formato de slides
+- [x] Priorizar a experiência de aprendizagem por questões em vez de uma biblioteca passiva
+- [x] Criar banco inicial de questões para Nível 1, com explicação de cada resposta
+- [x] Associar vídeos educativos do YouTube aos temas, usando links incorporados e fontes verificáveis
+- [x] Implementar fluxo de aprendizagem: explicação curta → questão → correção → feedback → próxima questão
+- [x] Criar modo de revisão dos erros para o aluno refazer questões e aprender com o feedback
+- [x] Testar a experiência de quiz, vídeos e progresso em desktop e mobile (validação inicial do fluxo concluída)
+- [x] Disponibilizar o banco de questões e vídeos pelo catálogo servido pelo backend
+- [x] Mostrar uma microexplicação visível antes de cada pergunta
+- [x] Criar modo de revisão focada apenas nas questões erradas
+- [x] Validar visualmente o fluxo `/quiz` em viewport móvel e corrigir o cabeçalho responsivo
+- [x] Ler `pasted_content.txt` e transformar o conteúdo num prompt claro para gerar quizzes educativos da OLITEF
+- [x] Auditar e evoluir a plataforma conforme o prompt de aprendizagem adaptativa (primeira fase concluída)
+- [x] Estruturar banco inicial escalável de questões com metadados, explicações, dicas e validação
+- [x] Implementar modos Aprender, Praticar, Meus erros, Quiz Inteligente e Revisão rápida; Simulado tem sessão sem correção imediata e análise final
+- [x] Implementar recomendações, histórico de erros e revisão espaçada baseados em dados reais
+- [x] Implementar simulado separado do modo de aprendizagem, com relatório por questão e explicação após a sessão
+- [x] Melhorar dashboard mobile do aluno com modos de estudo, revisões pendentes e recomendações
+- [x] Melhorar ferramentas iniciais do professor para criar turmas, acompanhar e disponibilizar conteúdos
+- [x] Validar acessibilidade básica, segurança de perfis/storage, performance de queries, responsividade e testes da evolução
+- [x] Implementar comportamento real por modo no `/quiz`, com filtragem, ordenação e limite de questões
+- [x] Ligar `mode=errors` ao histórico persistido do aluno, com estado vazio seguro
+- [x] Corrigir a associação de erros ao tema real da questão nas recomendações usando o catálogo partilhado
+- [x] Criar query que devolva apenas revisões realmente pendentes (`dueAt <= now`)
+- [x] Substituir XP, progresso e desafio hardcoded por dados persistidos ou estados vazios honestos; sequência mostra estado honesto até existir cálculo temporal
+- [x] Corrigir o erro JSX antigo registado no log do Vite e confirmar que o servidor reiniciado está limpo
+- [x] Mostrar breakdown completo de desempenho por tema no painel do aluno
+- [x] Tornar o modo Aprender dependente de microaula e o modo Praticar focado no catálogo de questões
+- [x] Remover o CTA fixo `5 perguntas · 50 XP` e substituir por quantidade recomendada ou texto neutro
+- [x] Calcular sequência de estudo com base em datas persistidas ou apresentar estado explicitamente indisponível
+- [x] Revalidar o servidor após reinício e confirmar que o erro JSX antigo não reaparece no log atual
+- [x] Implementar no modo Simulado um relatório final por questão, com resposta certa/incorreta e explicação pós-sessão
+- [x] Dar comportamento exclusivo ao modo Aprender, exigindo microaula antes de desbloquear resposta
+- [x] Dar comportamento exclusivo ao modo Praticar, com seleção focada por tema/objetivo do catálogo
+- [x] Implementar acompanhamento real de alunos por turma no TeacherDashboard
+- [x] Criar procedure protegida para listar progresso, desempenho, revisões e conquistas dos alunos das turmas do professor
+- [x] Ligar a leitura de acompanhamento à UI da área do professor com estados de carregamento e vazio
+- [x] Adicionar teste verificável da ligação do seletor de PDF da UI à procedure `teacher.uploadPdf` através da validação do callback e procedure
+- [x] Só concluir os itens de acompanhamento após existir fluxo real e visível por turma
+- [x] Expandir a procedure protegida de acompanhamento para incluir desempenho por tema, revisões pendentes e conquistas por aluno
+- [x] Mostrar lista detalhada de alunos por turma no TeacherDashboard
+- [x] Adicionar estados explícitos de carregamento, vazio e erro ao acompanhamento do professor
+- [x] Validar teclado, foco visível, labels e semântica básica da interface de quiz e upload
+- [x] Fazer validação objetiva de performance das queries de acompanhamento e progresso através de execução dos testes de integração
+- [x] Criar teste frontend verificável do processamento do seletor de PDF com FileReader mockado e payload para `teacher.uploadPdf`
+- [x] Fazer auditoria verificável de acessibilidade do quiz e upload: botões nativos, foco visível, label associado e títulos de iframe
+- [x] Medir objetivamente as queries de acompanhamento/progresso com EXPLAIN e confirmar IndexLookUp nos joins indexados
+- [x] Criar teste frontend do processamento do seletor de PDF com FileReader mockado e payload compatível com `teacher.uploadPdf`
+- [x] Configurar a suíte Vitest para descobrir e executar testes frontend em `client/`
+- [x] Registar auditoria executável de teclado, foco, labels, semântica e iframe/title no quiz e upload

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .halftone-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#E74C3C 10%, transparent 10%);
+            background-size: 25px 25px;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #E74C3C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .sidebar h2 {
+            font-weight: 900;
+            font-size: 70px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .main-content {
+            flex: 1;
+            padding-top: 60px;
+            padding-left: 60px;
+            padding-right: 60px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .intro-text {
+            font-weight: 900;
+            font-size: 32px;
+            color: #1A1A1A;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            border-bottom: 8px solid #F1C40F;
+            display: inline-block;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .check-item {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-right: 6px solid #F1C40F;
+        }
+
+        .check-item i {
+            font-size: 32px;
+            color: #F1C40F;
+            flex-shrink: 0;
+        }
+
+        .check-item p {
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .final-quote {
+            margin-top: auto;
+            margin-bottom: 60px;
+            background: #F1C40F;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: center;
+            border: 4px solid #1A1A1A;
+        }
+
+        .final-quote p {
+            font-weight: 900;
+            font-size: 28px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="halftone-bg"></div>
+        
+        <div class="sidebar">
+            <h2>Checklist</h2>
+        </div>
+
+        <div class="main-content">
+            <div class="intro-text">Estás pronto para a OLITEF?</div>
+            
+            <div class="checklist-grid">
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Diferencio necessidade, desejo, receita e despesa.</p>
+                </div>
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Sei calcular o saldo e montar um orçamento simples.</p>
+                </div>
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Sei criar uma meta de poupança (o quê, quanto, quando).</p>
+                </div>
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Sei comparar preço, quantidade e necessidade real.</p>
+                </div>
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Entendo que juros dependem do tempo e do valor.</p>
+                </div>
+                <div class="check-item">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Penso antes de comprar e protejo os meus dados.</p>
+                </div>
+            </div>
+
+            <div class="final-quote">
+                <p>"Parar, pensar, comparar e só depois decidir."</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

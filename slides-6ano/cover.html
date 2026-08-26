@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; overflow: hidden; }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .halftone-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: radial-gradient(#F1C40F 20%, transparent 20%);
+            background-size: 30px 30px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .accent-block {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: #E74C3C;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 2;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            width: 65%;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #E74C3C;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 110px;
+            line-height: 0.95;
+            color: #1A1A1A;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background: #F1C40F;
+            padding: 0 15px;
+            display: inline-block;
+        }
+
+        .subtitle {
+            font-weight: 500;
+            font-size: 32px;
+            color: #333333;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            font-weight: 900;
+            font-size: 28px;
+            color: #1A1A1A;
+        }
+
+        .brand span {
+            color: #E74C3C;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            z-index: 4;
+            color: #FFFFFF;
+            font-size: 180px;
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="halftone-bg"></div>
+        <div class="accent-block"></div>
+        
+        <div class="content">
+            <p class="eyebrow">Preparar para a OLITEF</p>
+            <h1>Missão<br><span class="highlight">Dinheiro</span></h1>
+            <p class="subtitle">Educação financeira para o Nível 1 — 6.º ano</p>
+            
+            <div class="footer">
+                <div class="brand">trilha<span>.litef</span></div>
+                <div style="width: 2px; height: 30px; background: #333333; opacity: 0.2;"></div>
+                <p style="font-weight: 500; color: #333333; opacity: 0.6;">aprender · decidir · planejar</p>
+            </div>
+        </div>
+
+        <div class="decoration">
+            <i class="fas fa-rocket"></i>
+        </div>
+    </div>
+</body>
+</html>
