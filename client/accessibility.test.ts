@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = resolve(import.meta.dirname);
+const root = resolve(dirname(fileURLToPath(import.meta.url)));
 const quiz = readFileSync(resolve(root, "src/pages/QuizExperience.tsx"), "utf8");
 const teacher = readFileSync(resolve(root, "src/pages/TeacherDashboard.tsx"), "utf8");
 const styles = readFileSync(resolve(root, "src/index.css"), "utf8");
