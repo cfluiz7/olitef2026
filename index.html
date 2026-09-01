@@ -10,42 +10,88 @@
 </head>
 <body>
   <div id="app">
-    <!-- HEADER -->
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="brand" onclick="navigate('dashboard')">
-          <span class="brand-icon">🦉</span>
-          <div class="brand-text"><strong>OLITEF</strong><small>Aniceto Teixeira</small></div>
+
+    <!-- ═════ REGISTER / LOGIN ═════ -->
+    <div id="login-view" class="auth-view">
+      <div class="auth-card">
+        <div class="auth-logo">🦉</div>
+        <h1>OLITEF 2026</h1>
+        <p class="auth-sub">Olimpíada de Educação Financeira</p>
+        <p class="auth-escola" id="authEscola"></p>
+
+        <div class="auth-step" id="step-name">
+          <h2>Qual é o seu nome?</h2>
+          <input type="text" id="inputName" placeholder="NOME DO ALUNO" maxlength="40" autocomplete="off">
+          <button class="btn btn-g btn-full" id="btnNameNext" onclick="nextNameStep()" disabled>Continuar</button>
         </div>
-        <div class="topbar-right">
-          <span class="chip">🔥 <span id="hdrXP">0</span></span>
-          <span class="chip">⭐ <span id="hdrStars">0</span></span>
+
+        <div class="auth-step hidden" id="step-level">
+          <h2>Escolha seu nível</h2>
+          <button class="level-pick" onclick="chooseLevel(1)">
+            <div class="level-pick-icon">🦉</div>
+            <div><strong>NÍVEL 1</strong><span>6º e 7º ano</span></div>
+          </button>
+          <button class="level-pick" onclick="chooseLevel(2)">
+            <div class="level-pick-icon">🎓</div>
+            <div><strong>NÍVEL 2</strong><span>8º e 9º ano</span></div>
+          </button>
         </div>
       </div>
-    </header>
+    </div>
 
-    <!-- CONTENT AREA -->
-    <main id="main-content"></main>
+    <!-- ═════ MAIN APP ═════ -->
+    <div id="app-view" class="hidden">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand" onclick="navigate('dashboard')">
+            <span class="brand-icon">🦉</span>
+            <div class="brand-text">
+              <strong>OLITEF</strong>
+              <small id="hdrNivel">Nível 1</small>
+            </div>
+          </div>
+          <div class="topbar-right">
+            <span class="chip">🔥 <b id="hdrStreak">0</b></span>
+            <span class="avatar" onclick="toggleUserMenu()" id="avatarBtn">?</span>
+          </div>
+        </div>
+        <!-- user menu -->
+        <div id="userMenu" class="user-menu hidden">
+          <div class="um-name" id="umName"></div>
+          <div class="um-nivel" id="umNivel"></div>
+          <button class="um-btn" onclick="navigate('progress')">📊 Meu desempenho</button>
+          <button class="um-btn" onclick="changeLevel()">🎯 Trocar nível</button>
+          <button class="um-btn" onclick="changeUser()">🔁 Trocar aluno</button>
+        </div>
+      </header>
 
-    <!-- BOTTOM NAV -->
-    <nav class="bottom-nav">
-      <button class="bn-btn active" data-nav="dashboard" onclick="navigate('dashboard')">
-        <span class="bn-icon">🏠</span><span class="bn-label">Início</span>
-      </button>
-      <button class="bn-btn" data-nav="modules" onclick="navigate('modules')">
-        <span class="bn-icon">📚</span><span class="bn-label">Conteúdos</span>
-      </button>
-      <button class="bn-btn" data-nav="quiz" onclick="navigate('quiz')">
-        <span class="bn-icon">🎯</span><span class="bn-label">Praticar</span>
-      </button>
-      <button class="bn-btn" data-nav="review" onclick="navigate('review')">
-        <span class="bn-icon">🔄</span><span class="bn-label">Revisar</span>
-      </button>
-      <button class="bn-btn" data-nav="progress" onclick="navigate('progress')">
-        <span class="bn-icon">📊</span><span class="bn-label">Progresso</span>
-      </button>
-    </nav>
+      <!-- CONTENT -->
+      <main id="main-content"></main>
+
+      <!-- BOTTOM NAV -->
+      <nav class="bottom-nav">
+        <button class="bn-btn active" data-nav="dashboard" onclick="navigate('dashboard')">
+          <span class="bn-icon">🏠</span><span class="bn-label">Início</span>
+        </button>
+        <button class="bn-btn" data-nav="simulados" onclick="navigate('simulados')">
+          <span class="bn-icon">📝</span><span class="bn-label">Simulados</span>
+        </button>
+        <button class="bn-btn" data-nav="conteudos" onclick="navigate('conteudos')">
+          <span class="bn-icon">📚</span><span class="bn-label">Conteúdos</span>
+        </button>
+        <button class="bn-btn" data-nav="ranking" onclick="navigate('ranking')">
+          <span class="bn-icon">🏆</span><span class="bn-label">Ranking</span>
+        </button>
+        <button class="bn-btn" data-nav="progress" onclick="navigate('progress')">
+          <span class="bn-icon">📊</span><span class="bn-label">Desempenho</span>
+        </button>
+      </nav>
+    </div>
   </div>
+
+  <script src="config.js"></script>
+  <script src="questions.js"></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
