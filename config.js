@@ -40,12 +40,16 @@ const CONFIG = {
 // Fonte central de dados. Atualize aqui para alterar o ranking.
 // A atualização é MANUAL: informe os novos resultados e edite este array.
 const RANKING = {
-  atualizadoEm: "2026-09-01T06:00:00",
+  atualizadoEm: "2026-09-04T06:00:00",
   atualizacaoManual: true, // true = atualização manual (sem mecanismo automático real)
   lista: [
-    { posicao: 1, nome: "Deus", pontuacao: 100 },
-    { posicao: 2, nome: "Tia Sandra", pontuacao: 95 },
-    { posicao: 3, nome: "Luiz Dev", pontuacao: 90 },
+    { posicao: 1, nome: "Elisa Klivia Giffony Da Mota", pontuacao: 3 },
+    { posicao: 1, nome: "Mariana Gomes de Aguiar", pontuacao: 3 },
+    { posicao: 1, nome: "Vanessa Cristina Rocha Teixeira", pontuacao: 3 },
+    { posicao: 2, nome: "Maria Geiza", pontuacao: 2 },
+    { posicao: 2, nome: "Wallison Teixeira dos Santos", pontuacao: 2 },
+    { posicao: 3, nome: "Francisco Ariel Teixeira Mota", pontuacao: 1 },
+    { posicao: 3, nome: "Hellen Mara", pontuacao: 1 },
   ],
 };
 

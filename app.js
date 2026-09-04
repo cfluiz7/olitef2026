@@ -774,7 +774,7 @@ function renderRanking(main) {
           <div class="rank-card ${top ? 'top' + r.posicao : ''}">
             <div class="rank-pos ${top ? 'pos' + r.posicao : 'other'}">${top ? posEmoji[r.posicao-1] : r.posicao + 'º'}</div>
             <div class="rank-name">${r.nome}</div>
-            <div class="rank-pont">${r.pontuacao} pts</div>
+            <div class="rank-pont">${r.pontuacao} ${r.pontuacao === 1 ? 'pt' : 'pts'}</div>
           </div>`;
       }).join('')}
       <div class="rank-update">
